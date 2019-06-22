@@ -25,14 +25,16 @@ for (x  ; x <= i; x++) { // initializes var x, sets testing condition of when x 
 //}
 //}
 
+////this code runs backward from 4 to 0 - closest yet!
 //for (i ; (x + 1) <= i; --i === i){
 //  if (i % 2 === 0) {
 //  $("#response").append("<br />" + (i) + " is even");
 //} else if ( i % 2 !== 0) {
   //$("#response").append("<br />" + (i) + " is odd");
 //}
-//} ////runs backward from 4 to 0 - closest yet!
+//}
 
+// all this code is junk
 //for (y, y === 0, ) {
   //$("#response").append("<br>" + (i + 1) + " is even");
   //i = i + 1;
