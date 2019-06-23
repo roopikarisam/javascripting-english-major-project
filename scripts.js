@@ -1,8 +1,29 @@
 
+//function that always returns the last item in whatever array you pass it.
+
+let arrayOfStrings, arrayOfNumbers, arrayMixed;
+arrayOfStrings = ["a", "b", "c"];
+arrayOfNumbers = [1, 2, 3, 4];
+arrayMixed = ["a" , 1, null, true, arrayOfNumbers, [4.5, 5.6]];
+
+function lastItem(x) {x.slice(-1);   // right now this returns second to last item of array
+$("#response").html(x.slice(-1));
+}
+lastItem(arrayMixed);
+//i think i need to pass the arrays into an object and then write pop function?
+
+
+//pop method for returning last item in array that works
+/*let arrayOfStrings, arrayOfNumbers, arrayMixed;
+arrayOfStrings = ["a", "b", "c"];
+arrayOfNumbers = [1, 2, 3, 4];
+arrayMixed = ["a" , 1, null, true, arrayOfNumbers, [4.5, 5.6]];
+
+$("#response").html(arrayOfNumbers.pop()); */
 //objects
 
 //using functions as properties (when functions are used as properties, they are called methods)
-let myHabaneroSauceSquirts, myBurritoObject;
+/* let myHabaneroSauceSquirts, myBurritoObject;
 myHabaneroSauceSquirts = 3; //assigns variable
 myBurritoObject = {
  tortilla: "wheat",
@@ -18,7 +39,7 @@ myBurritoObject = {
  }
 };
 $("#response").html("Your burrito has " + myBurritoObject.habaneroSauceSquirts   + " squirts of habanero.");
-myBurritoObject.spiciness(); //calls the function
+myBurritoObject.spiciness(); //calls the function */
 
  /* let myBurritoObject; //defining an object
 myBurritoObject = {
