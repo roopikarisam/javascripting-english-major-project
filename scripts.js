@@ -1,16 +1,16 @@
 
 //function that always returns the last item in whatever array you pass it.
 
-let arrayOfStrings, arrayOfNumbers, arrayMixed;
+/*let arrayOfStrings, arrayOfNumbers, arrayMixed;
 arrayOfStrings = ["a", "b", "c"];
 arrayOfNumbers = [1, 2, 3, 4];
 arrayMixed = ["a" , 1, null, true, arrayOfNumbers, [4.5, 5.6]];
 
-function lastItem(x) {x.slice(-1);   // right now this returns second to last item of array
+function lastItem(x) {x.slice(-1);
 $("#response").html(x.slice(-1));
 }
-lastItem(arrayMixed);
-//i think i need to pass the arrays into an object and then write pop function?
+lastItem(arrayMixed);*/
+//No clue if this is the "right" answer but the code works.
 
 
 //pop method for returning last item in array that works
