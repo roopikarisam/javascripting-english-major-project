@@ -1,15 +1,56 @@
 
+//objects
 
-//TIPPING CALCULATOR FUNCTION THAT DISTINGUISHES BETWEEN 20% and 0.02 as parameters 
-let tipCalculator;
-tipCalculator = function (total, tipRate) {
-  let tipAmount = tipRate * total;
-  if (tipRate >= 1) {
-$("#response").append("Your tip is $" + (tipAmount * 0.01));
-} else {$("#response").append("Your tip is $" + tipAmount);}
-}; //this just writes the function
+let myHabaneroSauceSquirts, myBurritoObject;
+myHabaneroSauceSquirts = 3; //assigns variable
+myBurritoObject = {
+ tortilla: "wheat",
+ guacamole: true,
+ beans: "pinto",
+ habaneroSauceSquirts: myHabaneroSauceSquirts, //defines property using variable assigned above
+ spiciness: function(){ //defines a property using the variable in a function - this is an anonymous function - it's ephemeral for the purpose of getting called, executed and disappearing.
+   if (myHabaneroSauceSquirts > 0) {
+     alert("This is a spicy burrito");
+   } else {
+     alert("This is a mild burrito");
+   }
+ }
+};
+$("#response").html("Your burrito has " + myBurritoObject.habaneroSauceSquirts   + " squirts of habanero.");
+myBurritoObject.spiciness(); //calls the function
 
-tipCalculator(50.00, 0.20); //this passes the parameters to the function to execute it
+ /* let myBurritoObject; //defining an object
+myBurritoObject = {
+  tortilla: "wheat",
+  guacamole: true,
+  beans: "pinto",
+  habaneroSauceSquirts: 3
+};
+$("#response").html(myBurritoObject.beans); //accessing property of object */
+
+//arrays
+/* let arrayOfStrings, arrayOfNumbers, arrayOfMixed;
+arrayOfStrings = ["a" , "b" , "c"];
+arrayOfNumbers = [1 , 2 , 3];
+arrayOfMixed = ["a" , 1 , null , true , arrayOfNumbers , [4.5 , 5.6]]; //defining arrays
+$("#response").html(arrayOfStrings.length); //accessing length property of array */
+
+/* let arrayOfStrings, arrayOfNumbers, arrayOfMixed;
+arrayOfStrings = ["a" , "b" , "c"];
+arrayOfNumbers = [1 , 2 , 3];
+arrayOfMixed = ["a" , 1 , null , true , arrayOfNumbers , [4.5 , 5.6]]; // defining arrays
+$("#response").html(arrayOfStrings[0]); //accessing item in array  */
+
+//TIPPING CALCULATOR FUNCTION THAT DISTINGUISHES BETWEEN 20% and 0.02 as parameters
+//let tipCalculator;
+//tipCalculator = function (total, tipRate) {
+//  let tipAmount = tipRate * total;
+//  if (tipRate >= 1) {
+//$("#response").append("Your tip is $" + (tipAmount * 0.01));
+//} else {$("#response").append("Your tip is $" + tipAmount);}
+//}; //this just writes the function
+
+//tipCalculator(50.00, 0.20); //this passes the parameters to the function to execute it
 
 //TIPPING CALCULATOR FUNCTION
 //let tipCalculator;
