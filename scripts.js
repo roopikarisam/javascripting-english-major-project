@@ -4,10 +4,10 @@
 let tipCalculator;
 tipCalculator = function (total, tipRate) {
   let tipAmount = tipRate * total;
-$("#response").append("Your tip is $ " + tipAmount);
-};
+$("#response").append("Your tip is $" + tipAmount);
+}; //this just writes the function
 
-tipCalculator(50.00, 0.2);
+tipCalculator(50.00, 0.2); //this passes the parameters to the function to execute it
 
 //TIPPING CALCULATOR Ch. 2
 //let tipRate, bill, billPlusTip;
