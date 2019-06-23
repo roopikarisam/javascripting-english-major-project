@@ -1,12 +1,20 @@
 
 
+//TIPPING CALCULATOR FUNCTION
+let tipCalculator;
+tipCalculator = function (total, tipRate) {
+  let tipAmount = tipRate * total;
+$("#response").append("Your tip is $ " + tipAmount);
+};
+
+tipCalculator(50.00, 0.2);
 
 //TIPPING CALCULATOR Ch. 2
-let tipRate, bill, billPlusTip;
-tipRate = 0.20;
-bill = 10.00;
-billPlusTip = (bill * tipRate) + bill;
-console.log(billPlusTip);
+//let tipRate, bill, billPlusTip;
+//tipRate = 0.20;
+//bill = 10.00;
+//billPlusTip = (bill * tipRate) + bill;
+//console.log(billPlusTip);
 
 //COUNT UP TO USER INPUT
 //let i = prompt("givemeanumber");
