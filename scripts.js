@@ -8,7 +8,7 @@ myBurritoObject = {
  guacamole: true,
  beans: "pinto",
  habaneroSauceSquirts: myHabaneroSauceSquirts, //defines property using variable assigned above
- spiciness: function(){ //defines a property using the variable in a function - this is an anonymous function [function()]- it's ephemeral for the purpose of getting called, executed and disappearing.
+ spiciness: function(){ //defines a property using the variable in a function - this is an anonymous function [function()]- it's ephemeral for the purpose of getting called, executed and disappearing. Because it was not declared & named elsewhere, it's not accessible elswehwere. 
    if (myHabaneroSauceSquirts > 0) {
      alert("This is a spicy burrito");
    } else {
