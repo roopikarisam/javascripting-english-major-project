@@ -1,13 +1,25 @@
 
 
-//TIPPING CALCULATOR FUNCTION
+//TIPPING CALCULATOR FUNCTION THAT DISTINGUISHES BETWEEN 20% and 0.02 as parameters 
 let tipCalculator;
 tipCalculator = function (total, tipRate) {
   let tipAmount = tipRate * total;
-$("#response").append("Your tip is $" + tipAmount);
+  if (tipRate >= 1) {
+$("#response").append("Your tip is $" + (tipAmount * 0.01));
+} else {$("#response").append("Your tip is $" + tipAmount);}
 }; //this just writes the function
 
-tipCalculator(50.00, 0.2); //this passes the parameters to the function to execute it
+tipCalculator(50.00, 0.20); //this passes the parameters to the function to execute it
+
+//TIPPING CALCULATOR FUNCTION
+//let tipCalculator;
+//tipCalculator = function (total, tipRate) {
+//  let tipAmount = tipRate * total;
+//$("#response").append("Your tip is $" + tipAmount);
+//}; //this just writes the function
+
+//tipCalculator(50.00, 0.2); //this passes the parameters to the function to execute it
+
 
 //TIPPING CALCULATOR Ch. 2
 //let tipRate, bill, billPlusTip;
