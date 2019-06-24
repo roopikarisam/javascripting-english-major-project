@@ -1,4 +1,27 @@
 
+
+//webpage should ask for a number and then let you know if that is an integer or not.
+let a = (prompt("give me a number")); //actually yields a string
+let b = parseFloat(a); // turns string from prompt into number (floating point)
+
+function evaluateInteger(b) {
+
+  if (Number.isInteger(b)) {
+    $("#response").append("Your number is an integer!");
+  } else {
+   $("#response").append("Your number is not an integer!");
+ }
+}
+evaluateInteger(b); 
+
+
+//working if else statement for Number.isInteger. Doesn't yet include prompt.
+/*if (Number.isInteger(5.5)) {
+  $("#response").append("Your number is an integer!");
+} else {
+ $("#response").append("Your number is not an integer!");
+}/*
+
 //function that always returns the last item in whatever array you pass it.
 
 /*let arrayOfStrings, arrayOfNumbers, arrayMixed;
