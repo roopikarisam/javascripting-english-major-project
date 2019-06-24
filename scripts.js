@@ -12,7 +12,7 @@ function evaluateInteger(b) {
    $("#response").append("Your number is not an integer!");
  }
 }
-evaluateInteger(b); 
+evaluateInteger(b);
 
 
 //working if else statement for Number.isInteger. Doesn't yet include prompt.
