@@ -3,9 +3,23 @@
 
 // get list of turtle names if names have letter o.
 
+let leonardo, donatello, raphael, michelangelo, turtles, names, namesWithO;
+leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
+donatello = {name: "Donatello", color: "purple", weapon: "bo"};
+raphael = {name: "Raphael", color: "red", weapon: "sai"};
+michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
+turtles = [leonardo, donatello, raphael, michelangelo];
+names = turtles.map(function(turtle){ //anonymous function iterates/loops over array to get the weapons into new array
+  return turtle.name;
+}).sort();
+namesWithO = names.filter(function(name){
+  return name.includes("o");
+}).join(", ");
+$("#response").html(namesWithO);
+
 // mapped names to new array
 
-let leonardo, donatello, raphael, michelangelo, turtles, names;
+/*let leonardo, donatello, raphael, michelangelo, turtles, names;
 leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
 donatello = {name: "Donatello", color: "purple", weapon: "bo"};
 raphael = {name: "Raphael", color: "red", weapon: "sai"};
@@ -14,7 +28,7 @@ turtles = [leonardo, donatello, raphael, michelangelo];
 names = turtles.map(function(turtle){ //anonymous function iterates/loops over array to get the weapons into new array
   return turtle.name;
 });
-$("#response").html(names);
+$("#response").html(names); */
 //creating new array from properties in objects and sorting in alphabetical order
 
 /*let leonardo, donatello, raphael, michelangelo, turtles, weapons;
