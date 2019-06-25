@@ -1,7 +1,20 @@
 
 //mapping and filtering
 
-//creating new array from properties in objects
+//creating new array from properties in objects and sorting in alphabetical order
+
+/* let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
+donatello = {name: "Donatello", color: "purple", weapon: "bo"};
+raphael = {name: "Raphael", color: "red", weapon: "sai"};
+michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
+turtles = [leonardo, donatello, raphael, michelangelo];
+weapons = turtles.map(function(turtle){
+  return turtle.weapon;
+});
+// weapons is now ["katana", "bo", "sai", "nunchaku"]
+$("#response").html(weapons); */
+
 let leonardo, donatello, raphael, michelangelo, turtles, weapons;
 leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
 donatello = {name: "Donatello", color: "purple", weapon: "bo"};
@@ -10,12 +23,25 @@ michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
 turtles = [leonardo, donatello, raphael, michelangelo];
 weapons = turtles.map(function(turtle){ //anonymous function iterates/loops over array to get the weapons into new array
   return turtle.weapon;
-});
+}).sort().join(", ");//sorts weapons into alphabetical order and adds commas
 $("#response").html(weapons);
+
+//creating new array from properties in objects
+
+/*let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
+donatello = {name: "Donatello", color: "purple", weapon: "bo"};
+raphael = {name: "Raphael", color: "red", weapon: "sai"};
+michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
+turtles = [leonardo, donatello, raphael, michelangelo];
+weapons = turtles.map(function(turtle){ //anonymous function iterates/loops over array to get the weapons into new array
+  return turtle.weapon + " ";
+});
+$("#response").html(weapons);*/
 
 //.forEach() iteration over arrays
 
-/*let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+/* let leonardo, donatello, raphael, michelangelo, turtles, weapons;
 leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
 donatello = {name: "Donatello", color: "purple", weapon: "bo"};
 raphael = {name: "Raphael", color: "red", weapon: "sai"};
