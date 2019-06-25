@@ -1,7 +1,31 @@
 
+// function makes every letter uppercase except e
+
+let userString, upperCaseMinusE, upperCasedString; //defines variables
+userString = prompt("What do you want to UPPerCASe?"); //asks for user input
+upperCaseMinusE = function(string) { //declare function
+  let result;
+  result = ""; // define result variable
+  for (let i = 0; i < string.length ; i = i + 1) { //for loop to iterate over string [same principle as looping over an array]
+    let letter; //define letter variable
+    letter = string[i]; //to facilitate looping over string, i is the index in the string [same principle as looping over an array] - using i because the iteration is i in line 7
+  if ( letter === "e") {
+    result = result + letter; //adds each letter to the result variable every time (just result would just return the last letter)
+  } else {
+    result = result + letter.toUpperCase();
+  }
+}
+return result;
+};
+
+upperCasedString = upperCaseMinusE(userString);
+$("#response").html(upperCasedString); // I keep missing the # for response
+
+
+
 
 //webpage should ask for a number and then let you know if that is an integer or not.
-let a = (prompt("give me a number")); //actually yields a string
+/*let a = (prompt("give me a number")); //actually yields a string
 let b = parseFloat(a); // turns string from prompt into number (floating point)
 
 function evaluateInteger(b) {
@@ -12,7 +36,7 @@ function evaluateInteger(b) {
    $("#response").append("Your number is not an integer!");
  }
 }
-evaluateInteger(b);
+evaluateInteger(b); */
 
 
 //working if else statement for Number.isInteger. Doesn't yet include prompt.
