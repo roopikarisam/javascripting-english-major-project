@@ -1,21 +1,23 @@
 
 //mapping and filtering
 
-//creating new array from properties in objects and sorting in alphabetical order
+// get list of turtle names if names have letter o.
 
-/* let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+// mapped names to new array
+
+let leonardo, donatello, raphael, michelangelo, turtles, names;
 leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
 donatello = {name: "Donatello", color: "purple", weapon: "bo"};
 raphael = {name: "Raphael", color: "red", weapon: "sai"};
 michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
 turtles = [leonardo, donatello, raphael, michelangelo];
-weapons = turtles.map(function(turtle){
-  return turtle.weapon;
+names = turtles.map(function(turtle){ //anonymous function iterates/loops over array to get the weapons into new array
+  return turtle.name;
 });
-// weapons is now ["katana", "bo", "sai", "nunchaku"]
-$("#response").html(weapons); */
+$("#response").html(names);
+//creating new array from properties in objects and sorting in alphabetical order
 
-let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+/*let leonardo, donatello, raphael, michelangelo, turtles, weapons;
 leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
 donatello = {name: "Donatello", color: "purple", weapon: "bo"};
 raphael = {name: "Raphael", color: "red", weapon: "sai"};
@@ -23,8 +25,8 @@ michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
 turtles = [leonardo, donatello, raphael, michelangelo];
 weapons = turtles.map(function(turtle){ //anonymous function iterates/loops over array to get the weapons into new array
   return turtle.weapon;
-}).sort().join(", ");//sorts weapons into alphabetical order and adds commas
-$("#response").html(weapons);
+}).sort().join(", ");//sorts weapons into alphabetical order and adds commas - it is now a string because join creates string from array
+$("#response").html(weapons); */
 
 //creating new array from properties in objects
 
