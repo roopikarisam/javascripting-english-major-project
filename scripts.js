@@ -1,9 +1,15 @@
 
 //mapping and filtering
 
-// get list of turtle names if names have letter o.
+//function takes array of integers and uses .map() to return array of integers doubled.
 
-let leonardo, donatello, raphael, michelangelo, turtles, names, namesWithO;
+let singles = [1, 2, 3];
+let doubles = singles.map(function(single) {  //used map to multiply
+  return single * 2;
+}).join (", "); 
+$("#response").html(doubles);
+
+/*let leonardo, donatello, raphael, michelangelo, turtles, names, namesWithO;
 leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
 donatello = {name: "Donatello", color: "purple", weapon: "bo"};
 raphael = {name: "Raphael", color: "red", weapon: "sai"};
@@ -15,7 +21,7 @@ names = turtles.map(function(turtle){ //anonymous function iterates/loops over a
 namesWithO = names.filter(function(name){
   return name.includes("o");
 }).join(", ");
-$("#response").html(namesWithO);
+$("#response").html(namesWithO); */
 
 // mapped names to new array
 
