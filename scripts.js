@@ -1,7 +1,35 @@
 
+//mapping and filtering
+
+let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
+donatello = {name: "Donatello", color: "purple", weapon: "bo"};
+raphael = {name: "Raphael", color: "red", weapon: "sai"};
+michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
+turtles = [leonardo, donatello, raphael, michelangelo];
+weapons = ""; //a list of weapons
+turtles.forEach(function(turtle){ //iterates/loops over array to get the weapons
+  weapons = weapons + turtle.weapon + " ";
+});
+$("#response").html(weapons);
+
+//.forEach() iteration over arrays
+
+/*let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
+donatello = {name: "Donatello", color: "purple", weapon: "bo"};
+raphael = {name: "Raphael", color: "red", weapon: "sai"};
+michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
+turtles = [leonardo, donatello, raphael, michelangelo];
+weapons = ""; //a list of weapons
+turtles.forEach(function(turtle){ //iterates/loops over array to get the weapons
+  weapons = weapons + turtle.weapon + " ";
+});
+$("#response").html(weapons); */
+
 // function makes every letter uppercase except e
 
-let userString, upperCaseMinusE, upperCasedString; //defines variables
+/*let userString, upperCaseMinusE, upperCasedString; //defines variables
 userString = prompt("What do you want to UPPerCASe?"); //asks for user input
 upperCaseMinusE = function(string) { //declare function
   let result;
@@ -19,7 +47,7 @@ return result;
 };
 
 upperCasedString = upperCaseMinusE(userString);
-$("#response").html(upperCasedString); // I keep missing the # for response
+$("#response").html(upperCasedString); // I keep missing the # for response */
 
 
 
