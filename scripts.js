@@ -1,9 +1,48 @@
 
+//debugging
+
+//using isNaN() to verify if data is a number
+/*let promptValue;
+
+promptValue = prompt("Type in a number, please");
+if (isNaN(promptValue) === true) {
+	alert("The value you submitted is not a number");
+} else {
+	// Do the calculations on promptValue knowing it
+	// will behave like a number and move on from here.
+} */
+
+//--> "number"
+/*> let x, y, z;
+> x = "string";
+//--> "string"
+> y = x + 3;
+//--> "string3"
+> z = x * 3;
+//--> NaN [not a number]*/
+
+/* let turtlesWithSplinter, reversedTurtlesWithoutSplinter;
+turtlesWithSplinter = ["Leonardo", "Donatello", "Raphael", "Michelangelo", "Splinter"];
+// Use .filter() instead of .pop().
+reversedTurtlesWithoutSplinter = turtlesWithSplinter.filter(function(turtle){
+  // What is the value of turtle?
+  console.log(turtle);
+  return turtle !== "Splinter";
+}).reverse();
+$("#response").html(reversedTurtlesWithoutSplinter); */
+
+/*let turtlesWithSplinter, reversedTurtlesWithoutSplinter;
+turtlesWithSplinter = ["Leonardo", "Donatello", "Raphael", "Michelangelo", "Splinter"];
+turtlesWithSplinter.pop();
+reversedTurtlesWithoutSplinter  = turtlesWithSplinter.reverse();
+//reverse();
+$("#response").html(reversedTurtlesWithoutSplinter); */
+
 //mapping and filtering
 
 // add functionality to weapons example so the final result is "bo, katana, nunchaku, and sai" [need to add the and before last item]
 
-let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+/*let leonardo, donatello, raphael, michelangelo, turtles, weapons;
 leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
 donatello = {name: "Donatello", color: "purple", weapon: "bo"};
 raphael = {name: "Raphael", color: "red", weapon: "sai"};
@@ -14,7 +53,7 @@ weapons = turtles.map(function(turtle){
 }).sort(); //puts array in alphabetical order
 weapons.splice(-1 , 0, "and"); //added and before last item in array
 let newWeapons = weapons.join(", "); //joined items in array with comma and created new string
-$("#response").html(newWeapons.replace("and," , "and")); //replaced "and," in string with "and" 
+$("#response").html(newWeapons.replace("and," , "and")); //replaced "and," in string with "and"  */
 
 //function takes array of integers and uses .map() to return array of integers doubled.
 
