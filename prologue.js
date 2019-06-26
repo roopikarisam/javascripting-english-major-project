@@ -9,7 +9,7 @@ line1.forEach(function(word){
   let wordString;
   wordString = word.text;
   if (word.modern) {
-    wordString = "<a href='#'>" + wordString + "</a>";
+    wordString = "<a href='#' data-modern='" +  word.modern + "'>" + wordString + "</a>";
   }
   line1Text = line1Text + wordString + " ";
 });
@@ -18,5 +18,8 @@ $("#prologue").html("<p>" + line1Text + "<br /></p>");
 // <br /> makes a line break, which will come in handy when we have many
 // lines.
 $("#prologue a").click(function(){
-  $("#glosses").append("<h2>You clicked on a word!</h2>");
+  let glossText, clickedWord;
+  clickedWord = $(this).text(); //when called w/o parameters, .text() method gets text; when called w/ parameters it sets the text to the parameter.
+  glossText = "<h2>You clicked on a word!</h2>" + clickedWord + "</h2>";
+  $("#glosses").html(glossText);
 }); //this is going to be helpful to try and get stuff to show up in a sidebar on the data viz
