@@ -1,4 +1,7 @@
 
+//css
+
+$("p").html("I changed all the ps");
 //debugging
 
 //using isNaN() to verify if data is a number
