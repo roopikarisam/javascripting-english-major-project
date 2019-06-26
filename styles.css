@@ -3,7 +3,7 @@ p {
   background-color: #fdf6e3;
 }
 
-.second-paragraph { /*use period for ID*/
+.second-paragraph { /*use period for classes*/
   color: #b58900;
 }
 
