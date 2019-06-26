@@ -17,3 +17,6 @@ line1.forEach(function(word){
 $("#prologue").html("<p>" + line1Text + "<br /></p>");
 // <br /> makes a line break, which will come in handy when we have many
 // lines.
+$("#prologue a").click(function(){
+  $("#glosses").append("<h2>You clicked on a word!</h2>");
+});
