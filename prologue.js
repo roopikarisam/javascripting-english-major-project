@@ -19,4 +19,4 @@ $("#prologue").html("<p>" + line1Text + "<br /></p>");
 // lines.
 $("#prologue a").click(function(){
   $("#glosses").append("<h2>You clicked on a word!</h2>");
-});
+}); //this is going to be helpful to try and get stuff to show up in a sidebar on the data viz
