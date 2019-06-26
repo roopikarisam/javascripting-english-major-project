@@ -1,0 +1,12 @@
+p {
+  color: #657b83;
+  background-color: #fdf6e3;
+}
+
+.second-paragraph { /*use period for ID*/
+  color: #b58900
+}
+
+#third-paragraph { /*use pound sign for class*/
+  color: #d33682
+  } 
