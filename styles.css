@@ -4,9 +4,13 @@ p {
 }
 
 .second-paragraph { /*use period for ID*/
-  color: #b58900
+  color: #b58900;
 }
 
 #third-paragraph { /*use pound sign for class*/
-  color: #d33682
-  } 
+  color: #d33682;
+  }
+
+.lead {
+  font-weight: 700;
+}

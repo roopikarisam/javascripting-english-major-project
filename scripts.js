@@ -1,7 +1,10 @@
 
 //css
+let i = 0;
+for (i; i <= 0; i++) {
+$("p:last").addClass("lead");}
 
-//$("p").html("I changed all the ps");
+//$("p").html("I changed all the ps");}
 //debugging
 
 //using isNaN() to verify if data is a number
