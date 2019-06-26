@@ -1,13 +1,29 @@
 
 //mapping and filtering
 
+// add functionality to weapons example so the final result is "bo, katana, nunchaku, and sai" [need to add the and before last item]
+
+let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
+donatello = {name: "Donatello", color: "purple", weapon: "bo"};
+raphael = {name: "Raphael", color: "red", weapon: "sai"};
+michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
+turtles = [leonardo, donatello, raphael, michelangelo];
+weapons = turtles.map(function(turtle){
+  return turtle.weapon;
+}).sort();
+weapons.splice(-1 , 0, "and");
+let newWeapons = weapons.join(", ");
+newWeapons.slice(-5);
+$("#response").html(newWeapons.replace("and," , "and"));
+
 //function takes array of integers and uses .map() to return array of integers doubled.
 
-let singles = [1, 2, 3];
+/* let singles = [1, 2, 3];
 let doubles = singles.map(function(single) {  //used map to multiply
   return single * 2;
-}).join (", "); 
-$("#response").html(doubles);
+}).join (", ");
+$("#response").html(doubles); */
 
 /*let leonardo, donatello, raphael, michelangelo, turtles, names, namesWithO;
 leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
