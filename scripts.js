@@ -11,11 +11,10 @@ michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
 turtles = [leonardo, donatello, raphael, michelangelo];
 weapons = turtles.map(function(turtle){
   return turtle.weapon;
-}).sort();
-weapons.splice(-1 , 0, "and");
-let newWeapons = weapons.join(", ");
-newWeapons.slice(-5);
-$("#response").html(newWeapons.replace("and," , "and"));
+}).sort(); //puts array in alphabetical order
+weapons.splice(-1 , 0, "and"); //added and before last item in array
+let newWeapons = weapons.join(", "); //joined items in array with comma and created new string
+$("#response").html(newWeapons.replace("and," , "and")); //replaced "and," in string with "and" 
 
 //function takes array of integers and uses .map() to return array of integers doubled.
 
