@@ -1,7 +1,44 @@
+// adding links to wikipedia from JSON data to gloss
+// 1. Set the content of #glosses
+$("#glosses").html("<p>The glosses will go here.</p>");
+// 2. Set the content of the Prologue
+$.getJSON("https://the-javascripting-english-major.org/v1/prologue.json", function (data){
+  let prologueText; //define the variable needed
+  prologueText = "<blockquote><p>"; // open the tags
+  //now iterate over the data variable's .lines property:
+  data.lines.forEach(function(line){ //returns a variable, lines
+  //define blank lineText.
+  let lineText;
+  lineText = "";
+// now iterate over each line. should be familiar
+  line.forEach(function(word){
+    let wordString, wordURL;
+    wordString = word.text;
+    wordURL = word.url;
+    if (word.modern){ //alternative parameters, (word.modern, word.url) only adds links for words with modern AND URL... to get the URL in the gloss something else has to happen
+      wordString = "<a href='#' data-modern='" + word.modern + word.url + "'>" + wordString + "</a>";
+    } ////currently returning urls if there are urls but otherwise undefined - need to do something else to get rid of undefined (it's gotta be an if or if else or something else (tried switch and it didn't work)
+    lineText = lineText + wordString + " ";
+  });
+// Add lineText with a line break to the prologueText.
+prologueText = prologueText + lineText + "<br/>";
+});
+//close the prologueText tags.
+prologueText = prologueText + "</p></blockquote>";
+$("#prologue").html(prologueText);
+
+$("#prologue a").click(function(){
+ let glossText, clickedWord, modernWord;
+ clickedWord = $(this).text(); //when called w/o parameters, .text() method gets text; when called w/ parameters it sets the text to the parameter.
+ modernWord = $(this).data("modern"); //gets data for modern
+ glossText = "<h2>You clicked " + clickedWord + ", which means " + modernWord + "</h2>";
+ $("#glosses").html(glossText); //the clicking had to be within the function b/c async
+});
+});
 
 //clicky code using JSON data
 // 1. Set the content of #glosses
-$("#glosses").html("<p>The glosses will go here.</p>");
+/*$("#glosses").html("<p>The glosses will go here.</p>");
 // 2. Set the content of the Prologue
 $.getJSON("https://the-javascripting-english-major.org/v1/prologue.json", function (data){
   let prologueText; //define the variable needed
@@ -32,9 +69,9 @@ $("#prologue a").click(function(){
  clickedWord = $(this).text(); //when called w/o parameters, .text() method gets text; when called w/ parameters it sets the text to the parameter.
  modernWord = $(this).data("modern"); //gets data for modern
  glossText = "<h2>You clicked " + clickedWord + ", which means " + modernWord + "</h2>";
- $("#glosses").html(glossText); //the clicking had to be within the function b/c async 
+ $("#glosses").html(glossText); //the clicking had to be within the function b/c async
 });
-});
+});*/
 
 
 //replace the content of #prologue.
