@@ -12,11 +12,11 @@ $.getJSON("https://the-javascripting-english-major.org/v1/prologue.json", functi
   lineText = "";
 // now iterate over each line. should be familiar
   line.forEach(function(word){
-    let wordString, wordURL;
+    let wordString;
     wordString = word.text;
-    wordURL = word.url;
     if (word.modern){ //alternative parameters, (word.modern, word.url) only adds links for words with modern AND URL... to get the URL in the gloss something else has to happen
-      wordString = "<a href='#' data-modern='" + word.modern + word.url + "'>" + wordString + "</a>";
+      if (word.url){ wordString = "<a href='#' data-modern='" + word.modern + ". Learn more at: " + word.url + "'>" + wordString + "</a>";
+    } else { wordString = "<a href='#' data-modern='" + word.modern + "'>" + wordString + "</a>";}
     } ////currently returning urls if there are urls but otherwise undefined - need to do something else to get rid of undefined (it's gotta be an if or if else or something else (tried switch and it didn't work)
     lineText = lineText + wordString + " ";
   });
@@ -31,7 +31,7 @@ $("#prologue a").click(function(){
  let glossText, clickedWord, modernWord;
  clickedWord = $(this).text(); //when called w/o parameters, .text() method gets text; when called w/ parameters it sets the text to the parameter.
  modernWord = $(this).data("modern"); //gets data for modern
- glossText = "<h2>You clicked " + clickedWord + ", which means " + modernWord + "</h2>";
+ glossText = "<h2>You clicked " + clickedWord + ", which means " + modernWord + ". </h2>";
  $("#glosses").html(glossText); //the clicking had to be within the function b/c async
 });
 });
