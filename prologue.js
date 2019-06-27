@@ -25,17 +25,22 @@ prologueText = prologueText + lineText + "<br/>";
 });
 //close the prologueText tags.
 prologueText = prologueText + "</p></blockquote>";
-//replace the content of #prologue.
 $("#prologue").html(prologueText);
-}); //close callback function & method
-//3. Wait for user to click on an <a> tag inside #prologue and then change the content of #glosses.
+
 $("#prologue a").click(function(){
-  let glossText, clickedWord, modernWord;
-  clickedWord = $(this).text(); //when called w/o parameters, .text() method gets text; when called w/ parameters it sets the text to the parameter.
-  modernWord = $(this).data("modern"); //gets data for modern
-  glossText = "<h2>You clicked " + clickedWord + ", which means " + modernWord + "</h2>";
-  $("#glosses").html(glossText);
-}); //this is going to be helpful to try and get stuff to show up in a sidebar on the data viz
+ let glossText, clickedWord, modernWord;
+ clickedWord = $(this).text(); //when called w/o parameters, .text() method gets text; when called w/ parameters it sets the text to the parameter.
+ modernWord = $(this).data("modern"); //gets data for modern
+ glossText = "<h2>You clicked " + clickedWord + ", which means " + modernWord + "</h2>";
+ $("#glosses").html(glossText); //the clicking had to be within the function b/c async 
+});
+});
+
+
+//replace the content of #prologue.
+//close callback function & method
+//3. Wait for user to click on an <a> tag inside #prologue and then change the content of #glosses.
+ //this is going to be helpful to try and get stuff to show up in a sidebar on the data viz
 
 //working clicky code
 // 1. Set the content of #glosses
