@@ -14,10 +14,10 @@ $.getJSON("https://the-javascripting-english-major.org/v1/prologue.json", functi
   line.forEach(function(word){
     let wordString;
     wordString = word.text;
-    if (word.modern){ //alternative parameters, (word.modern, word.url) only adds links for words with modern AND URL... to get the URL in the gloss something else has to happen
-      if (word.url){ wordString = "<a href='#' data-modern='" + word.modern + ". Learn more at: " + word.url + "'>" + wordString + "</a>";
+    if (word.modern){
+      if (word.url){ wordString = "<a href='#' data-modern='" + word.modern + ". Learn more at: " + "<a href=>"+word.url +"</a>" + "'>" + wordString + "</a>"; //currently the url is printing but not a hyperlink
     } else { wordString = "<a href='#' data-modern='" + word.modern + "'>" + wordString + "</a>";}
-    } ////currently returning urls if there are urls but otherwise undefined - need to do something else to get rid of undefined (it's gotta be an if or if else or something else (tried switch and it didn't work)
+  }
     lineText = lineText + wordString + " ";
   });
 // Add lineText with a line break to the prologueText.
