@@ -14,8 +14,9 @@ $.getJSON("https://the-javascripting-english-major.org/v1/prologue.json", functi
   line.forEach(function(word){
     let wordString;
     wordString = word.text;
+    //console.log("<a href=" + word.url + ">" + word.url + "</a>"); //used console log to figure out how to make the active URL work and then put it into the if (word.url)
     if (word.modern){
-      if (word.url){ wordString = "<a href='#' data-modern='" + word.modern + ". Learn more at: " + "<a href=>"+word.url +"</a>" + "'>" + wordString + "</a>"; //currently the url is printing but not a hyperlink
+      if (word.url){ wordString = "<a href='#' data-modern='" +   word.modern + ". Learn more at: " + "<a href=" + word.url + ">" + word.url + "</a>"  + "'>" + wordString + "</a>"; //condition where there is both a modern and a url 
     } else { wordString = "<a href='#' data-modern='" + word.modern + "'>" + wordString + "</a>";}
   }
     lineText = lineText + wordString + " ";
