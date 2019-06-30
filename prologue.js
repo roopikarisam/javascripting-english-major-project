@@ -2,7 +2,7 @@
 // 1. Set the content of #glosses
 $("#glosses").html("<p>The glosses will go here.</p>");
 // 2. Set the content of the Prologue
-$.getJSON("https://the-javascripting-english-major.org/v1/prologue.json", function (data){ //b/c this is data we can later use data attributes.
+$.getJSON("https://the-javascripting-english-major.org/v1/prologue.json", function (data){ //b/c this is data we can later use data attributes https://www.w3schools.com/tags/att_global_data.asp
   let prologueText; //define the variable needed
   prologueText = "<blockquote><p>"; // open the tags
   //now iterate over the data variable's .lines property:
