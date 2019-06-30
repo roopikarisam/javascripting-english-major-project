@@ -1,6 +1,6 @@
 // adding links to wikipedia from JSON data to gloss
 // 1. Set the content of #glosses
-/*$("#glosses").html("<p>The glosses will go here.</p>");
+$("#glosses").html("<p>The glosses will go here.</p>");
 // 2. Set the content of the Prologue
 $.getJSON("https://the-javascripting-english-major.org/v1/prologue.json", function (data){ //b/c this is data we can later use data attributes.
   let prologueText; //define the variable needed
@@ -26,16 +26,16 @@ prologueText = prologueText + lineText + "<br/>";
 });
 //close the prologueText tags.
 prologueText = prologueText + "</p></blockquote>";
-$("#prologue").html(prologueText); */
+$("#prologue").html(prologueText);
 
-/*$("#prologue a").click(function(){
+$("#prologue a").click(function(){
  let glossText, clickedWord, modernWord;
  clickedWord = $(this).text(); //when called w/o parameters, .text() method gets text; when called w/ parameters it sets the text to the parameter.
  modernWord = $(this).data("modern"); //gets data for modern
  glossText = "<h2>You clicked " + clickedWord + ", which means " + modernWord + ". </h2>";
  $("#glosses").html(glossText); //the clicking had to be within the function b/c async
 });
-}); */
+});
 
 //clicky code using JSON data
 // 1. Set the content of #glosses
