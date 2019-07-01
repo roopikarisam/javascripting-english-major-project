@@ -1,0 +1,3 @@
+.map { /* map class has height property of 400px - Leaflet needs map container to have a defined height*/
+  height: 400px;
+}
