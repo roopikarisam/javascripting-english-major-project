@@ -6,5 +6,5 @@ L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x
       subdomains: "abcd",
       maxZoom: 18
     }); //defining tileLayer - this alone does not add tile layer, need to indicate what part of the world to show.
-tileLayer.addTo(firstMap);
-firstMap.setView([40.730833, -73.9975], 16); //lines 9 & 10 set initial map view
+tileLayer.addTo(firstMap); //all leaflet objects have to be added to the map using the .addTo() method.
+firstMap.setView([40.730833, -73.9975], 16); //lines 9 & 10 set initial map view. Map itself has a method, .setView() that has two parameters - array of coordinates adn zoom level. Highest zoom level is 19. 
