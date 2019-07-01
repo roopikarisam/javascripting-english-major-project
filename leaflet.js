@@ -14,3 +14,7 @@ bobstLibrary = L.marker([40.729444, -73.997222]); //indicating coordinates for m
 bobstLibrary.addTo(firstMap); //add object to map
 //bind popup to marker
 bobstLibrary.bindPopup("This is Bobst Library.");
+//lat and long coordinates are own objects in leaflet
+let bobstCoords;
+bobstCoords = L.latLng(40.729444, -73.997222); //creates objets of coords - can create latLng objects or use coordinate arrays like line 13
+firstMap.panTo(bobstCoords); //.panTo() method changes the map [e.g. will move map elsewhere. Theoretically one could do an onClick panTo and make the map move on click]
