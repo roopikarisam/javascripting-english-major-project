@@ -8,6 +8,9 @@ L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x
     }); //defining tileLayer, specificies server from which Leaflet should get tiles (here, cartocdn.com) and add three options (attribution is what appears in the bottom corner of the map) - this alone does not add tile layer, need to indicate what part of the world to show.
 tileLayer.addTo(firstMap); //all leaflet objects have to be added to the map using the .addTo() method.
 firstMap.setView([40.730833, -73.9975], 16); //lines 9 & 10 set initial map view. Map itself has a method, .setView() that has two parameters - array of coordinates adn zoom level. Highest zoom level is 19.
+//add marker to map
 let bobstLibrary; //define variable for map marker
 bobstLibrary = L.marker([40.729444, -73.997222]); //indicating coordinates for marker
 bobstLibrary.addTo(firstMap); //add object to map
+//bind popup to marker
+bobstLibrary.bindPopup("This is Bobst Library.");
