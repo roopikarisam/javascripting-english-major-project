@@ -6,9 +6,9 @@ tileLayer = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/ligh
               maxZoom: 18
             }).addTo(map);
 map.setView([40.730833, -73.9975], 16);
-
+//can turn csv into GeoJSON with converter http://www.convertcsv.com/csv-to-geojson.htm
 let couldBeFeatures;
-$.getJSON("https://the-javascripting-english-major.org/v1/could-be.geo.json", function(data){ //define leaflet layer
+$.getJSON("https://the-javascripting-english-major.org/v1/could-be.geo.json", function(data){ //define leaflet layer - getJSON is async so everything is happening inside the callback function defined in line 11
   let couldBeLayer; //define Leaflet layer.
   couldBeFeatures = data.features.map(function(feature){ //iterate over the .features property of the GeoJSON object to create an array of objects (called features), with every object's properties as noted.
     return { //returns and object
@@ -21,11 +21,11 @@ $.getJSON("https://the-javascripting-english-major.org/v1/could-be.geo.json", fu
       latLng: L.latLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]) //create an L.latLng object out of the GeoJSON coordinates - remember its long/lat not lat/long in GeoJSON
     };
   });
-  couldBeLayer = L.featureGroup(couldBeFeatures.map(function(feature){ //create Leaflet feature group made of markers for each object
+  couldBeLayer = L.featureGroup(couldBeFeatures.map(function(feature){ //create Leaflet feature group made of markers for each object (made up of several markers)
     return L.marker(feature.latLng);
   })
 );
 couldBeLayer.addTo(map); //add layer to map
-map.fitBounds(couldBeLayer.getBounds()); //redraw map so all markers are visible.
-map.zoomOut(1); //zoom out one level to give some padding
+map.fitBounds(couldBeLayer.getBounds()); //redraw map so all markers are visible. REturns bounding box that contains entity of the layer (couldBeLayer). It is fed as parameter to .fitBounds() which changes map's object state to new zoom level and helps center coordinate.
+map.zoomOut(1); //zoom out one level to give some padding. the map object's .zoomOut() method zooms out a smidge (1) to make all markers appear.
 });
