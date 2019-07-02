@@ -7,7 +7,7 @@ tileLayer = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/ligh
             }).addTo(map);
 map.setView([40.730833, -73.9975], 16);
 //can turn csv into GeoJSON with converter http://www.convertcsv.com/csv-to-geojson.htm
-let couldBeFeatures;
+let couldBeFeatures; //this is not defined w/in callback function so it is globally available for later
 $.getJSON("https://the-javascripting-english-major.org/v1/could-be.geo.json", function(data){ //define leaflet layer - getJSON is async so everything is happening inside the callback function defined in line 11
   let couldBeLayer; //define Leaflet layer.
   couldBeFeatures = data.features.map(function(feature){ //iterate over the .features property of the GeoJSON object to create an array of objects (called features), with every object's properties as noted.
