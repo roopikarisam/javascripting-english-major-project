@@ -31,15 +31,15 @@ map.zoomOut(1); //zoom out one level to give some padding. the map object's .zoo
 });
 
 //Define and assign a Markdown-it renderer.
-let md;
-md =window.markdownit({html: true}).use(window.markdownitFootnote);
+//let md;
+//md =window.markdownit({html: true}).use(window.markdownitFootnote);
 //Load the Markdown file with jQuery.
-$.ajax({url: "https://the-javascripting-english-major.org/v1/examples/markdown/hastings-street.md", //ajax method is more generic version of $.getJSON() - takes object as parameter with a .url property and a .success property which runs if the ajax() method runs smoothly. .url property must point to markdown file on a server (http or https)
-success: function(markdown){
+//$.ajax({url: "https://the-javascripting-english-major.org/v1/examples/markdown/hastings-street.md", //ajax method is more generic version of $.getJSON() - takes object as parameter with a .url property and a .success property which runs if the ajax() method runs smoothly. .url property must point to markdown file on a server (http or https)
+//success: function(markdown){
   //Convert Markdown to HTML.
-  let html;
-  html = md.render(markdown);
+//  let html;
+//  html = md.render(markdown);
   //print the HTML to #content using jquery.
-  $("#content").html(html);
-}
-});
+//$("#content").html(html);
+//}
+//});
