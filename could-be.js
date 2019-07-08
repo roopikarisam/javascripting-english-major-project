@@ -61,3 +61,58 @@ md = window.markdownit({html: true}).use(window.markdownitFootnote);
     }
   });
 });
+
+/*$.ajax({
+  url: "https://the-javascripting-english-major.org/v1/examples/markdown/poem.md",
+  success: function(poem){
+    let html;
+    html = md.render(poem);
+    $("#poem").html(html); //select poem, html() method to get the html, get string
+    // The above is the same as the $.ajax() call in the prev. ch.
+    $("#poem").html(function(_, oldHtml){ //anonymous function in html() method inherits two variables
+      let newHtml; //defines newHTML variable ans assign it to result of oldHTML
+      newHtml = oldHtml.replace(/Hastings Street/g, "<a href='#'  data-place='hastings-street'>Hastings Street</a>"); //does the replacement using /Hastings Street/g as regular expression, <a href...> is replacement spring (and new data tab is added)
+      return newHtml; //returns result of newHTML
+    });
+  }
+});*/
+
+//load Poemlet
+let loadPoem, loadNavTabs;
+loadPoem = function(featuresArray){
+  $.ajax({
+    url: "https://the-javascripting-english-major.org/v1/examples/markdown/poem.md",
+    success: function(markdown){
+      let html;
+      html = md.render(markdown);
+      $("#poem").html(html);
+    }
+  }
+);
+};
+
+//adding links to poem
+$.ajax({
+  url: "https://the-javascripting-english-major.org/v1/examples/markdown/poem.md",
+  success: function(poem){
+    // Read in the poem.
+    let html;
+    // Use the Markdown-it renderer I defined last chapter.
+    html = md.render(poem);
+    $("#poem").html(html);
+    // Once the poem is in, start the loop.
+    couldBeFeatures.forEach(function(feature){
+      $("#poem").html(function(_, oldHtml){
+        let regex, newHtml;
+        // Assign the the regex the value of feature.html and the
+        // flag “g”. This is the equivalent to /Hastings Street/g.
+        regex = RegExp(feature.html, "g");
+        // Fill in newHtml with the properties from the couldBeFeatures.
+        newHtml = "<a href='#' data-tab='" + feature.tab + "'>" + feature.html + "</a>";
+        // Return the newHtml wherever `replace()` finds the value
+        // of regex.
+        return oldHtml.replace(regex, newHtml);
+      });
+          });
+        }
+      });
